@@ -1,0 +1,28 @@
+body {
+  background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-login {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+}
+
+.btn-gold {
+  background: #d4af37;
+  color: #064e3b;
+  font-weight: 700;
+  border: none;
+}
+
+.btn-gold:hover {
+  background: #c29d26;
+  color: #fff;
+}

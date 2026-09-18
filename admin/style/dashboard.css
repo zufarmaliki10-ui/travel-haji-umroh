@@ -1,0 +1,139 @@
+:root {
+  --primary-emerald: #064e3b;
+  --secondary-emerald: #047857;
+  --accent-gold: #d97706;
+  --light-gold: #fef3c7;
+  --bg-modern: #f8fafc;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--bg-modern);
+}
+
+.dashboard-hero-premium {
+  background: linear-gradient(135deg, #022c22 0%, #064e3b 60%, #047857 100%);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(217, 119, 6, 0.2);
+  box-shadow: 0 20px 30px -10px rgba(6, 78, 59, 0.25);
+}
+
+.hero-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(217, 119, 6, 0.25) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: -100px;
+  right: -50px;
+  pointer-events: none;
+}
+
+.hero-pattern {
+  position: absolute;
+  right: -10px;
+  bottom: -35px;
+  opacity: 0.08;
+  font-size: 16rem;
+  color: #ffffff;
+  pointer-events: none;
+  transform: rotate(-10deg);
+}
+
+.gold-badge {
+  background: linear-gradient(
+    90deg,
+    rgba(217, 119, 6, 0.2) 0%,
+    rgba(245, 158, 11, 0.2) 100%
+  );
+  border: 1px solid #f59e0b;
+  color: #fef08a;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.stat-card-modern {
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card-modern::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.stat-card-modern.haji-card::before {
+  background: #d97706;
+}
+.stat-card-modern.umroh-card::before {
+  background: #0284c7;
+}
+.stat-card-modern.jamaah-card::before {
+  background: #059669;
+}
+.stat-card-modern.pendaftaran-card::before {
+  background: #7c3aed;
+}
+
+.stat-card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.07) !important;
+}
+
+.icon-box-modern {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.quick-card-interactive {
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  display: block;
+}
+
+.quick-card-interactive:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+}
+
+.quick-card-interactive:hover .action-arrow {
+  transform: translateX(5px);
+  background-color: var(--primary-emerald) !important;
+  color: #ffffff !important;
+}
+
+.action-arrow {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
