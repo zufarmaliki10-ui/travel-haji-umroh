@@ -27,18 +27,13 @@ require 'database/connection.php';
         </li>
         <li class="sidebar-menu-title">MANAJEMEN DATA</li>
         <li>
-            <a href="tabel_jamaah.php" class="">
+            <a href="index.php?page=jamaah" class="">
                 <i class="fas fa-users"></i> Data Jamaah
             </a>
         </li>
         <li>
             <a href="tabel_paket.php" class="">
                 <i class="fas fa-box"></i> Paket Haji/Umroh
-            </a>
-        </li>
-        <li>
-            <a href="tabel_pendaftaran.php" class="">
-                <i class="fas fa-clipboard-list"></i> Pendaftaran
             </a>
         </li>
         <li>
