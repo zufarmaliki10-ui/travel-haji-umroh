@@ -19,10 +19,10 @@
             <hr class="mt-0 mb-4" style="border-color: #e2e8f0;">
             <?php
 
-            include "function/paket/tambahPaket.php";
+            include "function/paket/updatePaket.php";
 
             if (isset($_POST["submit"])) {
-                if (tambahPaket($_POST) > 0) {
+                if (ubahPaket($_POST) > 0) {
                     echo "
                     <script>
                         document.location.href = 'index.php?page=paket';
@@ -39,11 +39,12 @@
             ?>
             <form action="" method="post">
                 <div class="row g-3">
+                    <input type="hidden" class="form-control" name="id" value="<?= $data['id'] ?>">
                     <!-- Nama Paket -->
                     <div class="col-md-8 mb-2">
                         <label for="nama_paket" class="form-label fw-semibold">Nama Paket <span class="text-danger">*</span></label>
                         <input type="text" class="form-control" id="nama_paket" name="nama_paket"
-                            placeholder="Contoh: Paket Umroh VIP Ramadhan" required>
+                            placeholder="Contoh: Paket Umroh VIP Ramadhan" value="<?= $data['nama_paket'] ?>" required>
                     </div>
 
                     <!-- Jenis Paket -->
@@ -51,8 +52,8 @@
                         <label for="jenis" class="form-label fw-semibold">Jenis Paket <span class="text-danger">*</span></label>
                         <select class="form-select" id="jenis" name="jenis" required>
                             <option value="" selected disabled>-- Pilih Jenis --</option>
-                            <option value="Haji">Haji</option>
-                            <option value="Umroh">Umroh</option>
+                            <option value="Haji" <?= $data['jenis'] === 'Haji' ? 'selected' : '' ?>>Haji</option>
+                            <option value="Umroh" <?= $data['jenis'] === 'Umroh' ? 'selected' : '' ?>>Umroh</option>
                         </select>
                     </div>
 
@@ -64,7 +65,7 @@
 
                             <!-- Input Tampilan (Rupiah Formatted) -->
                             <input type="number" class="form-control" id="harga" name="harga"
-                                placeholder="Contoh: 35.000.000" required>
+                                placeholder="Contoh: 35.000.000" value="<?= $data['harga'] ?>" required>
                         </div>
                     </div>
 
@@ -73,7 +74,7 @@
                         <label for="durasi" class="form-label fw-semibold">Durasi Perjalanan <span class="text-danger">*</span></label>
                         <div class="input-group">
                             <input type="number" class="form-control" id="durasi" name="durasi" min="1"
-                                placeholder="Contoh: 9" required>
+                                placeholder="Contoh: 9" value="<?= $data['durasi'] ?>" required>
                             <span class="input-group-text bg-light text-muted fw-semibold" style="border-top-right-radius: 12px; border-bottom-right-radius: 12px;">Hari</span>
                         </div>
                     </div>
@@ -83,7 +84,7 @@
                         <label for="kuota" class="form-label fw-semibold">Kuota Jamaah <span class="text-danger">*</span></label>
                         <div class="input-group">
                             <input type="number" class="form-control" id="kuota" name="kuota" min="1"
-                                oninput="if(this.value < 1) this.value = 1;" placeholder="Contoh: 45" required>
+                                value="<?= $data['kuota'] ?>" placeholder="Contoh: 45" required>
                             <span class="input-group-text bg-light text-muted fw-semibold" style="border-top-right-radius: 12px; border-bottom-right-radius: 12px;">Jamaah</span>
                         </div>
                     </div>
@@ -92,7 +93,7 @@
                     <div class="col-12 mb-3">
                         <label for="deskripsi" class="form-label fw-semibold">Deskripsi & Fasilitas Paket</label>
                         <textarea class="form-control" id="deskripsi" name="deskripsi" rows="4"
-                            placeholder="Jelaskan fasilitas tercover, seperti hotel, pesawat, bus, dan konsumsi..."></textarea>
+                            placeholder="Jelaskan fasilitas tercover, seperti hotel, pesawat, bus, dan konsumsi..."><?= $data['deskripsi'] ?></textarea>
                     </div>
                 </div>
 

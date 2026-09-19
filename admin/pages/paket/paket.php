@@ -157,7 +157,7 @@ require_once 'function/paket/dataPaket.php';
                                         </a>
 
                                         <!-- Tombol Hapus -->
-                                        <a href=""
+                                        <a href="function/paket/hapusPaket.php?id=<?= $data['id']; ?>"
                                             class="btn action-btn action-btn-delete"
                                             onclick="return confirm('Yakin ingin menghapus paket ini?');"
                                             title="Hapus Paket">
