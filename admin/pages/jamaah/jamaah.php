@@ -105,7 +105,7 @@ require_once 'function/jamaah/dataJamaah.php';
                                     <td class="py-3 text-muted small" style="max-width: 250px;"><?= $data["alamat"] ?></td>
                                     <td class="py-3 text-center">
                                         <div class="d-flex justify-content-center gap-1">
-                                            <a href="" class="btn btn-sm action-btn-delete px-2.5 py-1.5" onclick="return confirm('Yakin ingin menghapus data jamaah ini?')" title="Hapus Data">
+                                            <a href="function/jamaah/hapusJamaah.php?id=<?= $data['id']; ?>" class="btn btn-sm action-btn-delete px-2.5 py-1.5" onclick="return confirm('Yakin ingin menghapus data jamaah ini?')" title="Hapus Data">
                                                 <i class="fas fa-trash"></i>
                                             </a>
                                         </div>

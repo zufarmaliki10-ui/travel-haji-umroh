@@ -35,12 +35,6 @@ require 'database/connection.php';
                 case 'jamaah':
                     include 'pages/jamaah/jamaah.php';
                     break;
-                case 'tambahJamaah':
-                    include 'pages/jamaah/tambah.php';
-                    break;
-                case 'updateJamaah':
-                    include 'pages/jamaah/update.php';
-                    break;
                 default:
                     include "pages/dashboard.php";
                     break;
