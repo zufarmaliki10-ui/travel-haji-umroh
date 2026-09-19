@@ -35,6 +35,16 @@ require 'database/connection.php';
                 case 'jamaah':
                     include 'pages/jamaah/jamaah.php';
                     break;
+                //halaman data paket
+                case 'paket':
+                    include 'pages/paket/paket.php';
+                    break;
+                case 'tambah-paket':
+                    include 'pages/paket/formTambah.php';
+                    break;
+                case 'update-paket':
+                    include 'pages/paket/formUpdate.php';
+                    break;
                 default:
                     include "pages/dashboard.php";
                     break;

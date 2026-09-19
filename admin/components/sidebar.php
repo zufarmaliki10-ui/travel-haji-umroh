@@ -32,7 +32,7 @@ require 'database/connection.php';
             </a>
         </li>
         <li>
-            <a href="tabel_paket.php" class="">
+            <a href="index.php?page=paket" class="">
                 <i class="fas fa-box"></i> Paket Haji/Umroh
             </a>
         </li>
