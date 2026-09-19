@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location: ../index.php");
+    exit();
+}
+
+require "database/connection.php";
+?>
 <div class="main-wrapper">
     <div class="content-body p-4">
 

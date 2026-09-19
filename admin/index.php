@@ -1,11 +1,46 @@
+<?php
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location: ../index.php");
+    exit();
+}
+
+require 'database/connection.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <?php include "partials/head.php" ?>
 </head>
-<body>
-    
+
+<body class="d-flex min-vh-100">
+    <aside class="flex-shrink-0 min-vh-100 position-fixed">
+        <?php include "components/sidebar.php" ?>
+    </aside>
+    <main class="d-flex flex-column flex-grow-1">
+        <nav class="flex-shrink-0">
+            <?php include "components/navbar.php" ?>
+        </nav>
+        <section class="flex-grow-1">
+            <?php
+            $page = $_GET['page'];
+            switch ($page) {
+                // dashboard page
+                case 'dashboard':
+                    include 'pages/dashboard.php';
+                    break;
+                default:
+                    include "pages/dashboard.php";
+                    break;
+            }
+            ?>
+        </section>
+        <footer class="flex-shrink-0 text-center">
+            <?php include "components/footer.php" ?>
+        </footer>
+    </main>
 </body>
+
 </html>

@@ -11,5 +11,5 @@ session_unset();
 session_destroy();
 
 //kembali 
-header("location: index.php");
+header("location: ../../index.php");
 exit();
